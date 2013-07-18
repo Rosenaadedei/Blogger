@@ -1,8 +1,9 @@
 Blogger2::Application.routes.draw do
-  root 'articles#index'
+resources :tags
+root 'articles#index'
 
 resources :articles do
-  resources :comments
+resources :comments
 end 
 
 end
